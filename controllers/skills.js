@@ -1,4 +1,4 @@
-import { Skill, skills } from "../models/skill.js"
+import { Skill } from "../models/skill.js"
 
 function index (req, res ) {
   // just know that ({}) <- empty query object selects ALL documents.
@@ -16,8 +16,12 @@ function index (req, res ) {
   })
 }
 
-  
+function newSkill(req, res) {
+  res.render("skills/new")
+}
+
 
 export {
-  index
+  index, 
+  newSkill as new,
 }
